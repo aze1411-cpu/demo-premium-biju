@@ -107,6 +107,83 @@ details{border-bottom:1px solid var(--ln);padding:16px 0}summary{cursor:pointer;
 .note{background:var(--off);border-left:3px solid var(--gold);padding:12px 16px;font-size:13px;color:var(--mut);margin:16px 0}
 .lb{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}.lb .ph:nth-child(1){grid-column:span 4;grid-row:span 2}.lb .ph:nth-child(2),.lb .ph:nth-child(3){grid-column:span 2}.lb .ph:nth-child(4){grid-column:span 3}.lb .ph:nth-child(5){grid-column:span 3}
 .toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,30px);background:var(--esp);color:var(--ivory);padding:12px 22px;font-size:14px;opacity:0;pointer-events:none;transition:.4s;z-index:100;max-width:90vw;text-align:center}.toast.o{opacity:1;transform:translate(-50%,0)}
+
+/* VALEH DIGITAL — service proposal / package page */
+.offer-hero{position:relative;overflow:hidden;background:var(--esp);color:var(--ivory);padding:clamp(58px,9vw,112px) 0}
+.offer-hero:before{content:"";position:absolute;width:560px;height:560px;right:-150px;top:-250px;border-radius:50%;border:1px solid rgba(201,167,106,.28);box-shadow:0 0 0 36px rgba(201,167,106,.035),0 0 0 82px rgba(201,167,106,.025)}
+.offer-hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(36,22,18,.1),transparent 70%),radial-gradient(ellipse at 82% 38%,rgba(74,20,36,.75),transparent 48%)}
+.offer-hero .wrap{position:relative;z-index:1}
+.offer-head{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:58px}
+.offer-kicker{color:var(--gold);font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.offer-lang{display:inline-flex;gap:3px;padding:4px;border:1px solid rgba(232,220,203,.28);background:rgba(255,255,255,.04)}
+.offer-lang button{padding:7px 12px;color:var(--beige);font-size:11px;letter-spacing:.12em}
+.offer-lang button.active{background:var(--gold);color:var(--esp)}
+.offer-title{max-width:900px;font-size:clamp(46px,7.5vw,96px);line-height:.98;letter-spacing:-.035em}
+.offer-title em{color:var(--gold);font-style:italic}
+.offer-lead{max-width:650px;color:rgba(246,240,230,.76);font-size:16px;margin:26px 0 32px}
+.offer-hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.offer-hero .btn{background:var(--gold);border-color:var(--gold);color:var(--esp)}
+.offer-hero .btn.o{color:var(--ivory);border-color:rgba(246,240,230,.55);background:transparent}
+.offer-hero .btn.o:hover{background:var(--ivory);color:var(--esp)}
+.offer-meta{margin-top:34px;color:rgba(246,240,230,.55);font-size:12px;letter-spacing:.04em}
+.offer-section{padding:clamp(58px,8vw,104px) 0}
+.offer-section.alt{background:var(--off)}
+.offer-section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:38px}
+.offer-section-head p{max-width:460px;color:var(--mut);font-size:14px}
+.offer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.offer-card{position:relative;background:#fffdf9;border:1px solid var(--ln);padding:30px 26px 26px;display:flex;flex-direction:column;min-height:100%;box-shadow:0 14px 38px rgba(36,22,18,.035)}
+.offer-card.plus{border-top:3px solid var(--rose)}
+.offer-card.premium{background:linear-gradient(155deg,#54172b 0%,#32131e 54%,#241612 100%);border:1px solid var(--gold);color:var(--ivory);transform:translateY(-12px);box-shadow:0 24px 70px rgba(74,20,36,.2)}
+.offer-card.premium:before{content:"";position:absolute;inset:9px;border:1px solid rgba(201,167,106,.23);pointer-events:none}
+.offer-card>*{position:relative;z-index:1}
+.offer-card-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:22px}
+.offer-tier{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
+.offer-card.premium .offer-tier{color:var(--gold)}
+.offer-mark{font:italic 22px var(--serif);color:var(--gold)}
+.offer-pill{display:inline-flex;align-items:center;border:1px solid var(--gold);color:var(--gold);padding:5px 9px;font-size:9px;letter-spacing:.14em;text-transform:uppercase}
+.offer-card h3{font-size:31px;margin-bottom:8px}
+.offer-card .offer-desc{min-height:52px;color:var(--mut);font-size:13px;margin-bottom:22px}
+.offer-card.premium .offer-desc{color:rgba(246,240,230,.7)}
+.offer-price{font:400 clamp(42px,4.4vw,58px)/1 var(--serif);letter-spacing:-.04em;margin:4px 0 7px}
+.offer-price small{font:500 12px var(--sans);letter-spacing:.08em;color:var(--mut)}
+.offer-card.premium .offer-price small{color:rgba(246,240,230,.62)}
+.offer-price-note{color:var(--mut);font-size:11px;margin-bottom:22px}
+.offer-card.premium .offer-price-note{color:rgba(246,240,230,.56)}
+.offer-rule{height:1px;background:var(--ln);margin:0 0 20px}
+.offer-card.premium .offer-rule{background:rgba(232,220,203,.22)}
+.offer-features{list-style:none;padding:0;display:grid;gap:11px;margin:0 0 28px;flex:1}
+.offer-features li{position:relative;padding-left:22px;font-size:12px;line-height:1.55;color:var(--esp)}
+.offer-features li:before{content:"✓";position:absolute;left:0;top:0;color:var(--bur);font-size:13px}
+.offer-card.premium .offer-features li{color:rgba(246,240,230,.88)}
+.offer-card.premium .offer-features li:before{color:var(--gold)}
+.offer-card .btn{width:100%;text-align:center;padding:15px 16px;font-size:11px}
+.offer-card.premium .btn{background:var(--gold);border-color:var(--gold);color:var(--esp)}
+.offer-card.premium .btn:hover{background:var(--ivory);border-color:var(--ivory)}
+.offer-comparison{width:100%;border-collapse:collapse;background:#fffdf9;font-size:13px}
+.offer-comparison th,.offer-comparison td{padding:15px 16px;border-bottom:1px solid var(--ln);text-align:center}
+.offer-comparison th:first-child,.offer-comparison td:first-child{text-align:left;width:40%}
+.offer-comparison thead th{font-weight:600;color:var(--bur);background:var(--beige)}
+.offer-comparison td:last-child,.offer-comparison th:last-child{background:rgba(201,167,106,.10)}
+.offer-comparison .yes{color:#397452;font-weight:700}
+.offer-small{font-size:12px;color:var(--mut);margin-top:15px;max-width:900px}
+.offer-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.offer-detail{background:#fffdf9;border:1px solid var(--ln);padding:28px}
+.offer-detail h3{font-size:25px;margin-bottom:18px}
+.offer-detail ul{padding:0;list-style:none;display:grid;gap:12px}
+.offer-detail li{padding-left:20px;position:relative;color:var(--mut);font-size:13px}
+.offer-detail li:before{content:"—";position:absolute;left:0;color:var(--gold)}
+.offer-process{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:38px}
+.offer-step{border-top:1px solid var(--gold);padding-top:16px}
+.offer-step b{display:block;font:400 24px var(--serif);margin:10px 0 6px}
+.offer-step p{font-size:13px;color:var(--mut)}
+.offer-final{background:var(--bur);color:var(--ivory);padding:clamp(42px,7vw,76px);display:flex;justify-content:space-between;align-items:center;gap:28px}
+.offer-final h2{max-width:700px;font-size:clamp(34px,5vw,58px)}
+.offer-final p{color:var(--beige);font-size:13px;margin-top:13px;max-width:620px}
+.offer-final .btn{background:var(--gold);border-color:var(--gold);color:var(--esp);white-space:nowrap}
+.offer-note{font-size:12px;color:var(--mut);line-height:1.7}
+@media(max-width:980px){.offer-grid{grid-template-columns:1fr 1fr}.offer-card.premium{transform:none;grid-column:1/-1}.offer-card.premium .offer-features{grid-template-columns:1fr 1fr;display:grid;column-gap:22px}.offer-section-head{display:block}.offer-section-head p{margin-top:14px}}
+@media(max-width:680px){.offer-head{align-items:flex-start;margin-bottom:40px;flex-direction:column}.offer-grid,.offer-detail-grid,.offer-process{grid-template-columns:1fr}.offer-card.premium{grid-column:auto}.offer-card.premium .offer-features{grid-template-columns:1fr}.offer-comparison{font-size:11px}.offer-comparison th,.offer-comparison td{padding:10px 7px}.offer-comparison th:first-child,.offer-comparison td:first-child{width:43%}.offer-final{display:block}.offer-final .btn{margin-top:22px}.offer-title{font-size:clamp(44px,13vw,68px)}}
+
 @media(max-width:960px){.menu{display:none}.burger{display:block}.hero,.band .split,.look,.pd,.co,.cmp{grid-template-columns:1fr}.hero{min-height:0;padding-top:20px}.hero .big .ph{height:62vh}.hero .inset{left:12px;width:100px}
 .pg{grid-template-columns:repeat(2,1fr);gap:26px 12px}.exp{grid-template-columns:1fr 1fr}footer .fg{grid-template-columns:1fr 1fr}
 .cc:nth-child(n){grid-column:span 12;min-height:300px;grid-row:auto}.cc:nth-child(1){min-height:420px}.gal{grid-template-columns:1fr}.th{grid-template-columns:repeat(3,1fr);order:2}
@@ -119,12 +196,12 @@ details{border-bottom:1px solid var(--ln);padding:16px 0}summary{cursor:pointer;
 <header id="hd"><div class="wrap nav">
 <button class="burger" data-a="menu" aria-label="Menyu">☰</button>
 <a class="logo" href="#/">NÜRA</a>
-<nav class="menu" aria-label="Əsas menyu"><a href="#/">Ana səhifə</a><a href="#/collections">Kolleksiyalar</a><a href="#/shop/all">Məhsullar</a><a href="#/lookbook">Lookbook</a><a href="#/about">Haqqımızda</a><a href="#/contact">Əlaqə</a></nav>
+<nav class="menu" aria-label="Əsas menyu"><a href="#/">Ana səhifə</a><a href="#/collections">Kolleksiyalar</a><a href="#/shop/all">Məhsullar</a><a href="#/lookbook">Lookbook</a><a href="#/about">Haqqımızda</a><a href="#/contact">Əlaqə</a><a href="#/offer">Təklif / Packages</a></nav>
 <div class="ico"><button data-a="search" aria-label="Axtarış">Axtar</button><button data-go="#/favorites" aria-label="Favorites">♡<b id="fc">0</b></button><button data-a="cart" aria-label="Səbət">Səbət<b id="cc">0</b></button></div>
 </div>
 <div class="sbar" id="sb"><div class="wrap"><input id="q" type="search" placeholder="Məhsul axtar…" aria-label="Məhsul axtar"></div></div>
 </header>
-<div class="mm" id="mm"><button data-a="menu" style="position:absolute;top:24px;right:24px;font-size:28px" aria-label="Bağla">✕</button><a href="#/">Ana səhifə</a><a href="#/collections">Kolleksiyalar</a><a href="#/shop/all">Məhsullar</a><a href="#/lookbook">Lookbook</a><a href="#/about">Haqqımızda</a><a href="#/contact">Əlaqə</a><a href="#/favorites">Favorites</a></div>
+<div class="mm" id="mm"><button data-a="menu" style="position:absolute;top:24px;right:24px;font-size:28px" aria-label="Bağla">✕</button><a href="#/">Ana səhifə</a><a href="#/collections">Kolleksiyalar</a><a href="#/shop/all">Məhsullar</a><a href="#/lookbook">Lookbook</a><a href="#/about">Haqqımızda</a><a href="#/contact">Əlaqə</a><a href="#/offer">Təklif / Packages</a><a href="#/favorites">Favorites</a></div>
 <main id="app"></main>
 <footer><div class="wrap"><div class="fg">
 <div><div class="logo" style="color:var(--ivory)">NÜRA</div><p style="margin-top:14px;max-width:300px">The Art of Detail. Zəriflik, fərdilik və detallara verilən dəyər.</p></div>
@@ -224,6 +301,7 @@ const byId=id=>PRODUCTS.find(p=>p.id===id);
 let FAV=ld("nura_fav",[]).filter(byId),CART=ld("nura_cart",[]).filter(i=>byId(i.id)&&i.q>0),COUP=ld("nura_coupon","");
 if(!CONFIG.COUPONS[COUP])COUP="";
 const S={q:"",sort:"def",price:"all",fav:false};
+let OFFER_LANG=ld("nura_offer_lang","az")==="en"?"en":"az";
 function toast(m){const t=$("#ts");t.textContent=m;t.classList.add("o");clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove("o"),2600)}
 function hue(s){let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))%60;return 120+h}
 /* Foto sahəsi: real URL varsa şəkil, yoxdursa brend placeholder. data-media = media identifikatoru */
@@ -296,6 +374,36 @@ P.contact=()=>page("Contact",`<form class="fm" data-f="ct" novalidate><div><labe
 P.delivery=()=>page("Delivery & Returns",`<details open><summary>Çatdırılma</summary><p>Çatdırılma müddəti və qiyməti real mağaza məlumatları ilə doldurulmalıdır. Bu demo sayt real şərtlər təqdim etmir.</p></details><details><summary>Qaytarılma</summary><p>Qaytarılma şərtləri mağaza tərəfindən təyin ediləcək.</p></details>`);
 P.faq=()=>page("FAQ",[["Bu sayt real mağazadır?","Xeyr, bu demo nümayiş saytıdır."],["Ödəniş necə aparılır?","Demo rejimdə ödəniş yoxdur."],["Səbətim saxlanılır?","Bəli, brauzerinizdə (localStorage) saxlanılır."],["Kupon varmı?","Demo üçün DEMO10 kodu 10% güzəşt tətbiq edir."]].map(x=>`<details><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join(""));
 P.lookbook=()=>`<div class="wrap ph0"><h1 style="font-size:clamp(40px,6vw,80px)">Lookbook</h1></div><div class="wrap sec" style="padding-top:20px"><div class="lb">${[1,2,3,4,5].map(i=>ph("lookbook-"+i,i===1?"r45":"r34","","Lookbook "+i)).join("")}</div></div>`;
+
+function offerPage(){
+ const en=OFFER_LANG==="en";
+ const T=en?{
+  kicker:"VALEH DIGITAL · E-COMMERCE STUDIO",title:'A digital storefront <em>built for your brand.</em>',lead:"We design and develop modern, sales-focused e-commerce websites for jewelry and accessory businesses. Choose a package that fits your current stage and growth plans.",browse:"EXPLORE PACKAGES",contact:"DISCUSS YOUR PROJECT",priceNote:"One-time project service fee · Prices in AZN",packages:"Website packages",packagesSub:"Three clear service levels — from a polished online catalogue to a bespoke premium e-commerce experience.",startDesc:"A refined online storefront for businesses that receive orders through WhatsApp.",plusDesc:"A complete online shop with cart, checkout and order management through WooCommerce.",premiumDesc:"A bespoke premium storefront with deeper UX, merchandising and optimization.",per:"AZN",oneTime:"one-time service fee",features:"WHAT'S INCLUDED",startBtn:"CHOOSE START",plusBtn:"CHOOSE PLUS",premiumBtn:"DISCUSS PREMIUM",startBadge:"ONLINE SHOWCASE",plusBadge:"FULL E-COMMERCE",premiumBadge:"BESPOKE EXPERIENCE",comparison:"Compare the packages",comparisonSub:"A side-by-side overview of the main deliverables in each package.",feature:"Feature",products:"Initial product entry",design:"Design approach",catalog:"Product catalogue & categories",productPage:"Individual product pages",whatsapp:"WhatsApp ordering",woo:"WooCommerce integration",cart:"Cart & checkout",orders:"Admin order management",variants:"Product variations",coupons:"Coupons & discounts",search:"Product search",seo:"Basic SEO setup",analytics:"Analytics-ready setup",payment:"Card payment integration*",filters:"Advanced search & filters",favorites:"Favorites / wishlist",delivery:"Delivery settings",emails:"Email notifications",performance:"Performance optimization",security:"Security checks",testing:"Extended responsive testing",revisions:"Design revision rounds",incl:"Included",notIncl:"Not included",otherCosts:"Separate costs & project boundaries",otherCostsSub:"The following items are not included in the package prices and are paid separately by the client.",notIncludedList:["Domain registration and hosting","Paid WordPress themes, premium plugins and licenses","Payment provider transaction fees","SMS and other third-party services","Custom APIs and courier integrations","Customer account / personal dashboard (quoted separately)"],ownership:"Domain and hosting should be registered in the client's own name. Valeh Digital handles the agreed setup and technical configuration.",paymentTitle:"Important note about card payments",paymentText:"Card payment integration depends on the selected provider, the client's verified merchant account, contract and available API. A working payment flow cannot be promised before the provider credentials and access are supplied.",methodTitle:"How we work",methodSub:"A clear process keeps the project focused, transparent and easier to manage.",steps:[["01","Discover","We review the business, product range and order flow, then agree on the package and scope."],["02","Design & build","We adapt the visual direction to the brand and implement the agreed website functionality."],["03","Test & hand over","We review the responsive experience and agreed features, then hand over the website and admin access." ]],ctaTitle:"Ready to give your brand a stronger online presence?",ctaText:"Tell us about your products and business goals. We will help identify the package that fits your next step.",ctaBtn:"CONTACT VALEH DIGITAL",fine:"* Payment gateway availability is subject to the provider's requirements and account approval. Package prices exclude the separate costs listed above. Final scope is confirmed before work begins.",recommended:"MOST COMPLETE",included:"Included",no:"—"
+ }:{
+  kicker:"VALEH DIGITAL · E-COMMERCE STUDIO",title:'Brendinizə uyğun <em>rəqəmsal mağaza.</em>',lead:"Bijuteriya və aksesuar biznesləri üçün müasir, satış yönümlü e-commerce saytları hazırlayırıq. Biznesinizin hazırkı mərhələsinə və inkişaf planına uyğun paketi seçin.",browse:"PAKETLƏRƏ BAX",contact:"LAYİHƏNİ MÜZAKİRƏ ET",priceNote:"Birdəfəlik layihə xidmət haqqı · Qiymətlər AZN ilə",packages:"Veb-sayt paketləri",packagesSub:"Üç aydın xidmət səviyyəsi — peşəkar onlayn vitrindən fərdi premium e-commerce təcrübəsinə qədər.",startDesc:"Sifarişləri WhatsApp vasitəsilə qəbul edən bizneslər üçün zövqlü onlayn vitrin.",plusDesc:"WooCommerce üzərindən səbət, checkout və sifariş idarəetməsi olan tam onlayn mağaza.",premiumDesc:"Fərdi dizayn, inkişaf etmiş istifadəçi təcrübəsi və optimizasiya ilə premium mağaza.",per:"AZN",oneTime:"birdəfəlik xidmət haqqı",features:"PAKETƏ DAXİLDİR",startBtn:"START PAKETİNİ SEÇ",plusBtn:"PLUS PAKETİNİ SEÇ",premiumBtn:"PREMIUM ÜZRƏ ƏLAQƏ",startBadge:"ONLAYN VİTRİN",plusBadge:"TAM E-COMMERCE",premiumBadge:"FƏRDİ PREMIUM TƏCRÜBƏ",comparison:"Paketlərin müqayisəsi",comparisonSub:"Hər paketdə təqdim olunan əsas xidmətlərin yan-yana müqayisəsi.",feature:"Funksiya",products:"İlkin məhsul yerləşdirilməsi",design:"Dizayn yanaşması",catalog:"Məhsul kataloqu və kateqoriyalar",productPage:"Ayrı məhsul səhifələri",whatsapp:"WhatsApp ilə sifariş",woo:"WooCommerce inteqrasiyası",cart:"Səbət və checkout",orders:"Admin paneldə sifariş idarəetməsi",variants:"Məhsul variantları",coupons:"Kupon və endirimlər",search:"Məhsul axtarışı",seo:"Əsas SEO sazlamaları",analytics:"Analitika üçün hazırlıq",payment:"Kartla ödəniş inteqrasiyası*",filters:"İnkişaf etmiş axtarış və filtrlər",favorites:"Seçilmiş məhsullar / favorites",delivery:"Çatdırılma parametrləri",emails:"E-poçt bildirişləri",performance:"Performans optimizasiyası",security:"Təhlükəsizlik yoxlamaları",testing:"Geniş responsive testlər",revisions:"Dizayn düzəliş mərhələləri",incl:"Daxildir",notIncl:"Daxil deyil",otherCosts:"Əlavə xərclər və layihə sərhədləri",otherCostsSub:"Aşağıdakı xidmət və xərclər paket qiymətlərinə daxil deyil və müştəri tərəfindən ayrıca ödənilir.",notIncludedList:["Domen qeydiyyatı və hosting","Ödənişli WordPress temaları, premium pluginlər və lisenziyalar","Ödəniş provayderinin əməliyyat komissiyaları","SMS və digər üçüncü tərəf xidmətləri","Xüsusi API və kuryer inteqrasiyaları","Müştəri hesabı / şəxsi kabinet (əlavə qiymətləndirilir)"],ownership:"Domen və hosting müştərinin öz adına qeydiyyatdan keçirilməlidir. Razılaşdırılmış quraşdırma və texniki sazlama işlərini Valeh Digital həyata keçirir.",paymentTitle:"Kartla ödəniş haqqında vacib qeyd",paymentText:"Kartla ödəniş inteqrasiyası seçilmiş provayderdən, müştərinin təsdiqlənmiş merchant hesabından, müqavilədən və API imkanlarından asılıdır. Provayder məlumatları və giriş icazələri təqdim edilmədən işlək ödəniş sistemi vəd edilmir.",methodTitle:"İş prinsipi",methodSub:"Aydın mərhələlər layihənin məqsədyönlü, şəffaf və idarəolunan olmasına kömək edir.",steps:[["01","Tələblərin müəyyənləşdirilməsi","Biznes, məhsul çeşidi və sifariş prosesi təhlil edilir, paket və iş həcmi razılaşdırılır."],["02","Dizayn və hazırlanma","Brendə uyğun vizual istiqamət qurulur və razılaşdırılmış sayt funksiyaları hazırlanır."],["03","Test və təhvil","Mobil və desktop görünüşləri, razılaşdırılmış funksiyalar yoxlanılır, sayt və admin girişləri təhvil verilir."]],ctaTitle:"Brendinizin onlayn təqdimatını gücləndirməyə hazırsınız?",ctaText:"Məhsullarınız və biznes hədəfləriniz haqqında məlumat verin. Növbəti mərhələnizə uyğun paketi müəyyənləşdirməyə kömək edək.",ctaBtn:"VALEH DIGITAL İLƏ ƏLAQƏ",fine:"* Kartla ödəniş provayderin tələblərindən və hesabın təsdiqindən asılıdır. Paket qiymətlərinə yuxarıda göstərilən əlavə xərclər daxil deyil. Yekun iş həcmi layihəyə başlamazdan əvvəl razılaşdırılır.",recommended:"ƏN GENİŞ PAKET",included:"Daxildir",no:"—"
+ };
+ const items={
+  start:en?["Brand-adapted design","Home page, catalogue, About and Contact","3–5 product categories","Initial entry of up to 20 products","Individual product pages","WhatsApp ordering","Responsive mobile layout","Product management in WordPress admin"]:["Brendə uyğunlaşdırılmış dizayn","Ana səhifə, kataloq, Haqqımızda və Əlaqə","3–5 məhsul kateqoriyası","20 məhsula qədər ilkin yerləşdirmə","Məhsullar üçün ayrıca səhifələr","WhatsApp vasitəsilə sifariş","Mobil cihazlara uyğun dizayn","WordPress admin panelində məhsul idarəetməsi"],
+  plus:en?["Everything in START","Initial entry of up to 50 products","WooCommerce integration","Shopping cart and checkout","Customer name, phone and address fields","Order management in WordPress admin","Product variations (size, colour, etc.)","Coupons and discount codes","Product search","Basic SEO setup","Analytics integration readiness","Card payment integration, subject to provider access"]:["START paketinin bütün imkanları","50 məhsula qədər ilkin yerləşdirmə","WooCommerce inteqrasiyası","Səbət və checkout sistemi","Müştərinin adı, telefonu və ünvanı","WordPress admin panelində sifarişlərin idarəsi","Məhsul variantları (ölçü, rəng və s.)","Kupon və endirim kodları","Məhsul axtarışı","Əsas SEO sazlamaları","Analitika inteqrasiyası üçün hazırlıq","Provayder imkanlarından asılı kart ödənişi inteqrasiyası"],
+  premium:en?["Everything in PLUS","Initial entry of up to 100 products","Custom design concept created for the brand","Premium UI/UX and tailored page layouts","Advanced product search and filters","Favorites / wishlist functionality","Delivery settings configuration","Email notifications","Performance optimization","Security checks","Extended mobile, tablet and desktop testing","Three design revision rounds"]:["PLUS paketinin bütün imkanları","100 məhsula qədər ilkin yerləşdirmə","Brend üçün sıfırdan fərdi dizayn konsepsiyası","Premium UI/UX və xüsusi səhifə kompozisiyaları","İnkişaf etmiş məhsul axtarışı və filtrləmə","Seçilmiş məhsullar / favorites funksiyası","Çatdırılma parametrlərinin sazlanması","E-poçt bildirişləri","Performans optimizasiyası","Təhlükəsizlik yoxlamaları","Mobil, tablet və desktop üzrə geniş testlər","Üç dizayn düzəlişi mərhələsi"]
+ };
+ const card=(name,price,desc,badge,features,kind,btn)=>`<article class="offer-card ${kind}"><div class="offer-card-top"><span class="offer-tier">${name}</span>${kind==="premium"?`<span class="offer-pill">${T.recommended}</span>`:`<span class="offer-mark">${kind==="start"?"01":kind==="plus"?"02":"03"}</span>`}</div><h3>${name}</h3><p class="offer-desc">${desc}</p><div class="offer-price">${price}<small> ${T.per}</small></div><p class="offer-price-note">${T.oneTime}</p><div class="offer-rule"></div><div class="offer-tier" style="margin-bottom:16px">${T.features}</div><ul class="offer-features">${features.map(x=>`<li>${x}</li>`).join("")}</ul><a class="btn" href="#/contact">${btn}</a></article>`;
+ const rows=[
+  [T.products,"20 məhsul","50 məhsul","100 məhsul"],
+  [T.design,en?"Brand-adapted":"Brendə uyğun",en?"Enhanced customisation":"Təkmilləşdirilmiş fərdiləşdirmə",en?"Bespoke concept":"Sıfırdan fərdi"],
+  [T.catalog,T.incl,T.incl,T.incl], [T.productPage,T.incl,T.incl,T.incl], [T.whatsapp,T.incl,T.incl,T.incl], [en?"WordPress admin product management":"WordPress admin panelində məhsul idarəetməsi",T.incl,T.incl,T.incl],
+  [T.woo,T.no,T.incl,T.incl],[T.cart,T.no,T.incl,T.incl],[T.orders,T.no,T.incl,T.incl],[T.variants,T.no,T.incl,T.incl],[T.coupons,T.no,T.incl,T.incl],[T.search,T.no,T.incl,T.incl],[T.seo,T.no,T.incl,T.incl],[T.analytics,T.no,T.incl,T.incl],[T.payment,T.no,T.incl+"*",T.incl+"*"],[T.filters,T.no,T.no,T.incl],[T.favorites,T.no,T.no,T.incl],[T.delivery,T.no,T.no,T.incl],[T.emails,T.no,T.no,T.incl],[T.performance,T.no,T.no,T.incl],[T.security,T.no,T.no,T.incl],[T.testing,T.no,T.no,T.incl],[T.revisions,T.no,T.no,"3"]
+ ];
+ const cell=v=>v===T.incl?`<span class="yes">✓</span>`:v===T.no?"—":esc(v);
+ return `<section class="offer-hero"><div class="wrap"><div class="offer-head"><div class="offer-kicker">${T.kicker}</div><div class="offer-lang" role="group" aria-label="Language"><button data-a="offer-lang" data-lang="az" class="${en?"":"active"}" aria-pressed="${!en}">AZ</button><button data-a="offer-lang" data-lang="en" class="${en?"active":""}" aria-pressed="${en}">EN</button></div></div><h1 class="offer-title">${T.title}</h1><p class="offer-lead">${T.lead}</p><div class="offer-hero-actions"><button class="btn" type="button" data-a="offer-scroll">${T.browse}</button><a class="btn o" href="#/contact">${T.contact}</a></div><p class="offer-meta">${T.priceNote}</p></div></section>
+ <section class="offer-section" id="offer-packages"><div class="wrap"><div class="offer-section-head"><div><span class="offer-kicker">VALEH DIGITAL / SERVICES</span><h2 style="margin-top:12px">${T.packages}</h2></div><p>${T.packagesSub}</p></div><div class="offer-grid">${card("START","449",T.startDesc,T.startBadge,items.start,"start",T.startBtn)}${card("PLUS","899",T.plusDesc,T.plusBadge,items.plus,"plus",T.plusBtn)}${card("PREMIUM","1,499",T.premiumDesc,T.premiumBadge,items.premium,"premium",T.premiumBtn)}</div></div></section>
+ <section class="offer-section alt"><div class="wrap"><div class="offer-section-head"><div><span class="offer-kicker">DETAILS / OVERVIEW</span><h2 style="margin-top:12px">${T.comparison}</h2></div><p>${T.comparisonSub}</p></div><div style="overflow-x:auto"><table class="offer-comparison"><thead><tr><th>${T.feature}</th><th>START<br>449 AZN</th><th>PLUS<br>899 AZN</th><th>PREMIUM<br>1,499 AZN</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${r[0]}</td><td>${cell(r[1])}</td><td>${cell(r[2])}</td><td>${cell(r[3])}</td></tr>`).join("")}</tbody></table></div><p class="offer-small">${T.fine}</p></div></section>
+ <section class="offer-section"><div class="wrap"><div class="offer-section-head"><div><span class="offer-kicker">TRANSPARENCY</span><h2 style="margin-top:12px">${T.otherCosts}</h2></div><p>${T.otherCostsSub}</p></div><div class="offer-detail-grid"><article class="offer-detail"><h3>${T.notIncl}</h3><ul>${T.notIncludedList.map(x=>`<li>${x}</li>`).join("")}</ul></article><article class="offer-detail"><h3>${T.paymentTitle}</h3><p class="offer-note">${T.paymentText}</p><p class="offer-note" style="margin-top:18px">${T.ownership}</p></article></div></div></section>
+ <section class="offer-section alt"><div class="wrap"><div class="offer-section-head"><div><span class="offer-kicker">OUR WORKFLOW</span><h2 style="margin-top:12px">${T.methodTitle}</h2></div><p>${T.methodSub}</p></div><div class="offer-process">${T.steps.map(x=>`<article class="offer-step"><span class="offer-kicker">${x[0]}</span><b>${x[1]}</b><p>${x[2]}</p></article>`).join("")}</div></div></section>
+ <section class="offer-section"><div class="wrap"><div class="offer-final"><div><h2>${T.ctaTitle}</h2><p>${T.ctaText}</p></div><a class="btn" href="#/contact">${T.ctaBtn}</a></div></div></section>`;
+}
+P.offer=()=>offerPage();
+
 P.nf=()=>page("Səhifə tapılmadı",`<a class="btn" href="#/">ANA SƏHİFƏ</a>`);
 /* ===== SƏBƏT ===== */
 const sub=()=>CART.reduce((s,i)=>s+byId(i.id).price*i.q,0),disc=()=>sub()*(CONFIG.COUPONS[COUP]||0),total=()=>sub()-disc();
@@ -312,7 +420,7 @@ function route(){const h=(location.hash||"#/").slice(2).split("/"),r=h[0]||"home
  try{html=r==="shop"?P.shop(h[1]||"all"):r==="p"?P.p(h[1]):(Object.hasOwn(P,r)&&r!=="nf")?P[r](h[1]):P.nf()}catch(e){html=P.nf()}
  const a=$("#app");a.classList.add("out");setTimeout(()=>{a.innerHTML=html;window.scrollTo(0,0);a.classList.remove("out");$$(".menu a").forEach(x=>x.classList.toggle("on",x.getAttribute("href")==="#/"+r));
   const g=$("#pgrid");if(g){const sl=$("[data-s=sort]"),pr=$("[data-s=price]");sl.value=S.sort;pr.value=S.price;upGrid()}
-  $("#mm").classList.remove("o");reveal()},230);document.title=(r==="home"?"NÜRA Premium — The Art of Detail":"NÜRA — "+r)}
+  $("#mm").classList.remove("o");reveal()},230);document.title=(r==="home"?"NÜRA Premium — The Art of Detail":r==="offer"?"VALEH DIGITAL — Website Packages":"NÜRA — "+r)}
 function upGrid(){const g=$("#pgrid");if(!g)return;const l=listFor(g.dataset.slug);g.innerHTML=grid(l);$("#cnt").textContent=l.length+" məhsul"}
 let io;function reveal(){io&&io.disconnect();io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});$$(".rv").forEach(e=>io.observe(e))}
 /* ===== VALİDASİYA ===== */
@@ -328,6 +436,8 @@ function submit(f){
 /* ===== HADİSƏLƏR ===== */
 document.addEventListener("click",e=>{const g=e.target.closest("[data-go]");if(g){location.hash=g.dataset.go;return}
  const b=e.target.closest("[data-a]");if(!b)return;const a=b.dataset.a,id=b.dataset.id;
+ if(a==="offer-lang"){OFFER_LANG=b.dataset.lang==="en"?"en":"az";sv("nura_offer_lang",OFFER_LANG);route();return;}
+ if(a==="offer-scroll"){document.getElementById("offer-packages")?.scrollIntoView({behavior:"smooth",block:"start"});return;}
  if(a==="fav"){FAV=FAV.includes(id)?FAV.filter(x=>x!==id):[...FAV,id];saveCart();$$(`[data-a=fav][data-id="${id}"]`).forEach(x=>{const o=FAV.includes(id);x.textContent=o?"♥":"♡";x.setAttribute("aria-pressed",o)});if(S.fav)upGrid();if(location.hash==="#/favorites")route();toast(FAV.includes(id)?"Favorites-ə əlavə edildi":"Favorites-dən silindi")}
  else if(a==="quick"){const p=byId(id);if(p.colors.length>1||p.sizes.length){toast("Variantı seçin");location.hash="#/p/"+id}else add(id,p.colors[0]||"",""  ,1)}
  else if(a==="cart")openD(true);else if(a==="close")openD(false);
